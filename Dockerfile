@@ -6,6 +6,7 @@ RUN LC_ALL=C DEBIAN_FRONTEND=noninteractive \
 	chmod +x /usr/sbin/policy-rc.d && \
 	apt-get update && \
 	apt-get install -y -q postgresql-9.3 postgresql-contrib-9.3 && \
+	apt-get install -y -q postgis postgresql-9.3-postgis-2.1 && \
 	rm -rf /var/lib/apt/lists/* && \
 	apt-get clean && \
 	rm /usr/sbin/policy-rc.d && \
